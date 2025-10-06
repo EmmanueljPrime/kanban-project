@@ -1,0 +1,9 @@
+node_modules
+dist
+build
+coverage
+.env
+.git
+.gitignore
+.vscode
+.DS_Store
