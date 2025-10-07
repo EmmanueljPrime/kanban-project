@@ -40,10 +40,11 @@ model Project {
 }
 
 model Task {
-  id        String   @id @default(cuid())
+  id        String     @id @default(cuid())
   title     String
-  status    String   @default("todo") // todo | doing | done
+  status    TaskStatus @default(TODO) // TODO | DOING | DONE
   projectId String
-  project   Project  @relation(fields: [projectId], references: [id])
-  createdAt DateTime @default(now())
+  project   Project    @relation(fields: [projectId], references: [id])
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
 }
