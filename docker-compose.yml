@@ -16,7 +16,7 @@ services:
   api:
     build: ./apps/api
     env_file:
-      - ./apps/api/.env
+      - ./apps/api/.env.docker
     ports:
       - "4000:4000"
     depends_on:
